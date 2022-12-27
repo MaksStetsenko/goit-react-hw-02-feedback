@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Box } from 'components/Box';
 import { FeedbackButtonStyled } from './FeedbackOptions.styled';
@@ -24,3 +25,10 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 }
 
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(
+    PropTypes.string.isRequired
+  ),
+  onLeaveFeedback: PropTypes.func,
+}
